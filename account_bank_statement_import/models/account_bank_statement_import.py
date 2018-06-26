@@ -66,6 +66,12 @@ class AccountBankStatementImport(models.TransientModel):
             active_id=self.id,  # pylint: disable=no-member
             filename=self.filename
         )._import_file(data_file)
+
+        for statement_id in statement_ids:
+            statement_obj_id = self.env['account.bank.statement'].browse(statement_id)
+            for line in statement_obj_id.line_ids:
+                line.get_reconciliation_proposition(line)
+
         # dispatch to reconciliation interface
         action = self.env.ref(
             'account.action_bank_reconcile_bank_statements')

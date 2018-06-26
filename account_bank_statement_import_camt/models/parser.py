@@ -29,6 +29,7 @@ from openerp import _
 
 from openerp.addons.account_bank_statement_import.parserlib import (
     BankStatement)
+from copy import copy
 
 from openerp import models
 
