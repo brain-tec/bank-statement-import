@@ -44,9 +44,15 @@ class CamtParser(models.AbstractModel):
         sign = 1
         amount = 0.0
         sign_node = node.xpath('ns:CdtDbtInd', namespaces={'ns': ns})
+        if not sign_node:
+            sign_node = node.xpath(
+                '../../ns:CdtDbtInd', namespaces={'ns': ns})
         if sign_node and sign_node[0].text == 'DBIT':
             sign = -1
         amount_node = node.xpath('ns:Amt', namespaces={'ns': ns})
+        if not amount_node:
+            amount_node = node.xpath(
+                './ns:AmtDtls/ns:TxAmt/ns:Amt', namespaces={'ns': ns})
         if amount_node:
             amount = sign * float(amount_node[0].text)
         return amount
@@ -179,12 +185,14 @@ class CamtParser(models.AbstractModel):
             self.parse_transaction_details(ns, dnode, transaction)
             # transactions['data'] should be a synthetic xml snippet which
             # contains only the TxDtls that's relevant.
-            data = copy(node)
-            for j, dnode in enumerate(data.xpath(
-                    './ns:NtryDtls/ns:TxDtls', namespaces={'ns': ns})):
-                if j != i:
-                    dnode.getparent().remove(dnode)
-            transaction['data'] = etree.tostring(data)
+            # only set this field if statement lines have it
+            if 'data' in self.pool['account.bank.statement.line']._fields:
+                data = copy(node)
+                for j, dnode in enumerate(data.xpath(
+                        './ns:NtryDtls/ns:TxDtls', namespaces={'ns': ns})):
+                    if j != i:
+                        dnode.getparent().remove(dnode)
+                transaction['data'] = etree.tostring(data)
             yield transaction
 
     def get_balance_amounts(self, ns, node):

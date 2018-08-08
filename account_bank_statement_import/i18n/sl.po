@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * account_bank_statement_import
-# 
+#
 # Translators:
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2017
 msgid ""
@@ -11,12 +11,14 @@ msgstr ""
 "POT-Creation-Date: 2018-04-11 22:49+0000\n"
 "PO-Revision-Date: 2018-04-11 22:49+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-bank-statement-import-8-0/language/sl/)\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-bank-statement-"
+"import-8-0/language/sl/)\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 
 #. module: account_bank_statement_import
 #: code:addons/account_bank_statement_import/models/account_bank_statement_import.py:419
@@ -39,7 +41,8 @@ msgstr "1. Prenesite svoje bančne izpiske iz svoje bančne spletne strani."
 #: view:account.bank.statement.import:account_bank_statement_import.account_bank_statement_import_view
 msgid ""
 "2. Make sure you have installed the right module to support the file format."
-msgstr "2. Prepričajte se, da ste namestili pravi modul, ki podpira format datoteke."
+msgstr ""
+"2. Prepričajte se, da ste namestili pravi modul, ki podpira format datoteke."
 
 #. module: account_bank_statement_import
 #: view:account.bank.statement.import:account_bank_statement_import.account_bank_statement_import_view
@@ -54,10 +57,13 @@ msgstr "Transakcije bančnega računa se lahko uvozijo le enkrat!"
 #. module: account_bank_statement_import
 #: help:account.bank.statement.import,journal_id:0
 msgid ""
-"Accounting journal related to the bank statement you're importing. It has be"
-" be manually chosen for statement formats which doesn't allow automatic "
+"Accounting journal related to the bank statement you're importing. It has be "
+"be manually chosen for statement formats which doesn't allow automatic "
 "journal detection (QIF for example)."
-msgstr "Knjigovodski dnevnik v zvezi z bančnim izpiskom, ki ga uvažate. Formate izpiskov, ki ne omogočajo samodejne detekcije dnevnika (npr. QIF) izberite ročno."
+msgstr ""
+"Knjigovodski dnevnik v zvezi z bančnim izpiskom, ki ga uvažate. Formate "
+"izpiskov, ki ne omogočajo samodejne detekcije dnevnika (npr. QIF) izberite "
+"ročno."
 
 #. module: account_bank_statement_import
 #: code:addons/account_bank_statement_import/models/account_bank_statement_import.py:425
@@ -114,7 +120,9 @@ msgstr "Preklic"
 msgid ""
 "Could not make sense of the given file.\n"
 "Did you install the module to support this type of file?"
-msgstr "Dana datoteka nima smisla.\nSte namestili modul, ki podpira tak tip datotek?"
+msgstr ""
+"Dana datoteka nima smisla.\n"
+"Ste namestili modul, ki podpira tak tip datotek?"
 
 #. module: account_bank_statement_import
 #: field:account.bank.statement.import,create_uid:0
@@ -151,7 +159,9 @@ msgstr "Naziv datoteke"
 msgid ""
 "Get you bank statements in electronic format from your bank and select them "
 "here."
-msgstr "Od svoje banke pridobite bančne izpiske v elektronskem formatu in jih izberite od tukaj."
+msgstr ""
+"Od svoje banke pridobite bančne izpiske v elektronskem formatu in jih "
+"izberite od tukaj."
 
 #. module: account_bank_statement_import
 #: field:account.bank.statement.import,hide_journal_field:0
@@ -172,9 +182,11 @@ msgstr "ID"
 #: help:account.journal,enforce_sequence:0
 msgid ""
 "If checked, the Journal Sequence will determine the statement naming policy "
-"even if the name is already set manually or by the statement import "
-"software."
-msgstr "Če označeno, bo dnevniško zaporedje določilo pravila imenovanja izpiska tudi, če je bil naziv izpiska nastavljen ročno ali preko programja za uvoz izpiska."
+"even if the name is already set manually or by the statement import software."
+msgstr ""
+"Če označeno, bo dnevniško zaporedje določilo pravila imenovanja izpiska "
+"tudi, če je bil naziv izpiska nastavljen ročno ali preko programja za uvoz "
+"izpiska."
 
 #. module: account_bank_statement_import
 #: model:ir.actions.act_window,name:account_bank_statement_import.action_account_bank_statement_import
