@@ -192,8 +192,9 @@ class CamtParser(models.AbstractModel):
                 './ns:Acct/ns:Id/ns:Othr/ns:Id',
             ], result, 'account_number'
         )
-        self.add_value_from_node(
-            ns, node, './ns:Id', result, 'name')
+        # Don't parse name of statement -> custom sequence will be used
+        # self.add_value_from_node(
+        #     ns, node, './ns:Id', result, 'name')
         self.add_value_from_node(
             ns, node, './ns:Dt', result, 'date')
         self.add_value_from_node(
