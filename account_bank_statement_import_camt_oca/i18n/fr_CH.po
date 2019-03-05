@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: account_bank_statement_import_camt_oca
-#: model:ir.ui.view,arch_db:account_bank_statement_import_camt_oca.account_bank_statement_import_view
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_camt_oca.account_bank_statement_import_view
 msgid "CAMT"
 msgstr ""
 
@@ -50,6 +50,6 @@ msgid "account.bank.statement.import.camt.parser"
 msgstr ""
 
 #. module: account_bank_statement_import_camt_oca
-#: model:ir.ui.view,arch_db:account_bank_statement_import_camt_oca.account_bank_statement_import_view
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_camt_oca.account_bank_statement_import_view
 msgid "zipped CAMT"
 msgstr ""
