@@ -36,7 +36,10 @@ class OnlineBankStatementProviderDummy(models.Model):
         date_since -= expand_by * line_step
         date_until += expand_by * line_step
 
-        balance_start = randrange(-10000, 10000, 1) * 0.1
+        balance_start = self.env.context.get(
+            'balance_start',
+            randrange(-10000, 10000, 1) * 0.1
+        )
         balance = balance_start
         lines = []
         date = date_since
@@ -49,11 +52,16 @@ class OnlineBankStatementProviderDummy(models.Model):
                 'unique_import_id': str(int(
                     (date - datetime(1970, 1, 1)) / timedelta(seconds=1)
                 )),
+                'partner_name': 'John Doe',
+                'account_number': 'XX00 0000 0000 0000',
             })
             balance += amount
             date += line_step
         balance_end = balance
-        return lines, {
-            'balance_start': balance_start,
-            'balance_end_real': balance_end,
-        }
+        statement = {}
+        if self.env.context.get('balance', True):
+            statement.update({
+                'balance_start': balance_start,
+                'balance_end_real': balance_end,
+            })
+        return lines, statement
