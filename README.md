@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/OCA/bank-statement-import.svg?branch=13.0)](https://travis-ci.org/OCA/bank-statement-import)
 [![Coverage Status](https://coveralls.io/repos/OCA/bank-statement-import/badge.svg?branch=13.0)](https://coveralls.io/r/OCA/bank-statement-import?branch=13.0)
 
+# BT Customizations
+Open OCA PRs merged
+- (https://github.com/OCA/bank-statement-import/pull/295) account_bank_statement_import_ofx
+
 OCA bank statement import modules for Odoo
 ==========================================
 
