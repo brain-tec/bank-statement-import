@@ -7,6 +7,10 @@
 
 <!-- /!\ do not modify above this line -->
 
+# BT Customizations
+Open OCA PRs merged
+- (https://github.com/OCA/bank-statement-import/pull/295) account_bank_statement_import_ofx
+
 # OCA bank statement import modules for Odoo
 
 This repository hosts additionnal parsers and import features for bank statements.
