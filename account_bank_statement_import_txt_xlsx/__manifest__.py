@@ -5,7 +5,7 @@
 {
     "name": "Account Bank Statement Import TXT/CSV/XLSX",
     "summary": "Import TXT/CSV or XLSX files as Bank Statements in Odoo",
-    "version": "13.0.1.0.5",
+    "version": "13.0.2.0.0",
     "category": "Accounting",
     "website": "https://github.com/OCA/bank-statement-import",
     "author": "ForgeFlow, CorporateHub, Odoo Community Association (OCA)",
@@ -17,7 +17,7 @@
         "multi_step_wizard",
         "web_widget_dropdown_dynamic",
     ],
-    "external_dependencies": {"python": ["xlrd"]},
+    "external_dependencies": {"python": ["xlrd", "chardet"]},
     "data": [
         "security/ir.model.access.csv",
         "data/map_data.xml",
