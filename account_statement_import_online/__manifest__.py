@@ -5,14 +5,13 @@
 
 {
     "name": "Online Bank Statements",
-    "version": "14.0.3.0.1",
+    "version": "14.0.4.0.0",
     "author": "CorporateHub, Odoo Community Association (OCA)",
     "maintainers": ["alexey-pelykh"],
     "website": "https://github.com/OCA/bank-statement-import",
     "license": "AGPL-3",
     "category": "Accounting",
     "summary": "Online bank statements update",
-    "external_dependencies": {"python": ["odoo_test_helper"]},
     "depends": [
         "account_statement_import_base",
         "web_widget_dropdown_dynamic",
