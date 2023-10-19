@@ -13,6 +13,8 @@ setuptools.setup(
         'odoo-addon-account_statement_import_camt>=16.0dev,<16.1dev',
         'odoo-addon-account_statement_import_file>=16.0dev,<16.1dev',
         'odoo-addon-account_statement_import_ofx>=16.0dev,<16.1dev',
+        'odoo-addon-account_statement_import_online>=16.0dev,<16.1dev',
+        'odoo-addon-account_statement_import_online_ponto>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
